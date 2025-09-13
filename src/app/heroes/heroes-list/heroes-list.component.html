@@ -1,0 +1,47 @@
+<p>heroes-list works!</p>
+
+<h1>Lista de Dragon Ball</h1>
+<div class="card">
+  <div class="card-header">
+    Lista de Heroes
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-2">
+        Filtrar por:
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="filtrar herore">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6"></div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped" *ngIf="heroes.length>0"> <!-- que pinte la tabla siempre y cuando sea mayor a 0 -->
+        <thead>
+          <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Race</th>
+            <th>K1</th>
+          </tr>
+        </thead>
+        <tbody> <!-- <img [src="heroe.imagen"] width="100"> -->
+          <tr *ngFor="let heroe of heroes">
+            <td> <img [src]="heroe.imagen" alt="{{heroe.imagen}}" width="50"> </td>
+            <td>{{heroe.nombre}}</td>
+            <td>{{heroe.descripcion}}</td>
+            <td>{{heroe.race}}</td>
+            <td>{{heroe.k1}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
