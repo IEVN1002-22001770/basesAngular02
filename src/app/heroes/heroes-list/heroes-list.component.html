@@ -12,19 +12,21 @@
         Filtrar por:
       </div>
       <div class="col-md-4">
-        <input type="text" class="form-control" placeholder="filtrar herore">
+        <input [(ngModel)]="listFilter" type="text" class="form-control" placeholder="filtrar herore">
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-6"></div>
+      <h3>Filtro : {{listFilter}}</h3>
     </div>
 
     <div class="table-responsive">
       <table class="table table-striped" *ngIf="heroes.length>0"> <!-- que pinte la tabla siempre y cuando sea mayor a 0 -->
         <thead>
           <tr>
-            <th>Imagen</th>
+            <th><button (click)="showImage()" type="button" class="btn btn-primary">
+              {{muestraImg?'Oculta ':'Muestra '}}</button></th>
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Race</th>
@@ -32,8 +34,9 @@
           </tr>
         </thead>
         <tbody> <!-- <img [src="heroe.imagen"] width="100"> -->
-          <tr *ngFor="let heroe of heroes">
-            <td> <img [src]="heroe.imagen" alt="{{heroe.imagen}}" width="50"> </td>
+          <tr *ngFor="let heroe of heroes | heroesFilter:listFilter">
+
+            <td> <img *ngIf="muestraImg" [src]="heroe.imagen" alt="{{heroe.imagen}}" width="50"> </td>
             <td>{{heroe.nombre}}</td>
             <td>{{heroe.descripcion}}</td>
             <td>{{heroe.race}}</td>
