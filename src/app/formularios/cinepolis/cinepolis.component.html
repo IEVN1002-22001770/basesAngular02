@@ -1,0 +1,56 @@
+<!-- <p>cinepolis works!</p> <link rel="stylesheet" href="cinepolis.component.css"> -->
+
+<div id="back" class="p-3 mb-2 bg-primary text-white">
+  <h1 class="text-center">Cinepolis</h1>
+
+  <div class="row">
+    <div class="col-6">
+    <h1>Entradas</h1>
+
+      <form>
+        <div class="mb-3">
+        <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control" [(ngModel)]="nombre" name="nombre">
+        </div>
+        <div class="mb-3">
+        <label for="compradores">Cantidad de Compradores:</label>
+          <input type="number" class="form-control" [(ngModel)]="comprador" name="comprador">
+        </div>
+        <div class="mb-3">
+        <label>Tarjeta Cinepolis:</label>
+          <input type="radio" name="tarjeta" [(ngModel)]="tarjeta" value="si"> Si
+          <input type="radio" name="tarjeta" [(ngModel)]="tarjeta" value="no"> No
+        </div>
+        <div class="mb-3">
+        <label for="boletos">Cantidad de Boletos:</label>
+          <input type="number" class="form-control" [(ngModel)]="boleto" name="boleto">
+        </div>
+      </form>
+    </div>
+
+    <div class="col-6">
+      <h1>Salidas</h1>
+      <div class="mb-3">
+      <label for="valorPagar">Valor a Pagar:</label>
+        <input type="text" class="form-control" [value]="total">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row mt-3">
+
+  <div class="col-12 text-center">
+  <h1>Acciones</h1>
+    <button type="button" (click)="procesar()">Procesar</button>
+    <button type="button">Salir</button>
+
+    <div>
+      <label for="valorPagar">Resultado:</label>
+      <input type="text" class="form-control" [value]="mensaje">
+    </div>
+
+  </div>
+  </div>
+</div>
+
