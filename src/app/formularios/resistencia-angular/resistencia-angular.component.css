@@ -1,0 +1,11 @@
+select {
+    padding: 6px;
+    margin-top: 5px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    min-width: 120px;
+    text-align: center;
+    cursor: pointer;
+}
+
+

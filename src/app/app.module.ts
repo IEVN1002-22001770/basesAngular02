@@ -8,7 +8,8 @@ import {FormsModule} from '@angular/forms';
 import { HeroesFilterPipe } from './heroes/heroes-filter.pipe';
 import { OperasBasComponent } from './formularios/operas-bas/operas-bas.component';
 import { CinepolisComponent } from './formularios/cinepolis/cinepolis.component';
-import { ResistenciaAngularComponent } from './formularios/resistencia-angular/resistencia-angular.component'
+import { ResistenciaAngularComponent } from './formularios/resistencia-angular/resistencia-angular.component';
+
 
 @NgModule({
   declarations: [
@@ -18,12 +19,14 @@ import { ResistenciaAngularComponent } from './formularios/resistencia-angular/r
     OperasBasComponent,
     CinepolisComponent,
     ResistenciaAngularComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-  ],
+    FormsModule,
+
+],
   providers: [],
   bootstrap: [AppComponent]
 })

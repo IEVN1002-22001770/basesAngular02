@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './cinepolis.component.html',
   styleUrl: './cinepolis.component.css'
 })
+
+
 export class CinepolisComponent {
   nombre:string='';
   comprador:string='';
